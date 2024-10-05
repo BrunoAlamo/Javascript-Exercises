@@ -1,0 +1,11 @@
+function studentMsg(totalScores, studentScore) {
+  let message;
+  if(hasPassingGrade(studentScore)){
+    message = "Class average: " +  getAverage(totalScores) + ". " + "Your grade: " + getGrade(studentScore) + ". " + "You passed the course.";
+  } else {
+    message = "Class average: " +  getAverage(totalScores) + ". " + "Your grade: " + getGrade(studentScore) + ". " + "You failed the course."
+  }
+  return message;
+}
+console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
+console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 68));
