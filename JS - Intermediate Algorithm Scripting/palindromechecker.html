@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+
+<input id = "text-input"></input>
+<button id = "check-btn">Check</button>
+<div id = "result"><p></p></div>
+
+<script>
+const button = document.getElementById("check-btn");
+const inputText = document.getElementById("text-input");
+const resultText = document.getElementById("result");
+
+function noInput() {
+  if(inputText.value === ""){
+    alert("Please input a value");
+  } else {
+    return;
+  }
+}
+
+function cleanString(str) {
+    return str.replace(/[^a-z0-9]/gi, '').toLowerCase();
+}
+
+function palindromeChecker() {
+    let inputValue = inputText.value;
+    let cleanedInput = cleanString(inputValue);
+    let arr = cleanedInput.split("");
+    let reversedArr = cleanedInput.split("").reverse();
+    
+    if(arr.join('') === reversedArr.join('')){
+        resultText.innerText = inputValue + " is a palindrome";
+    } else {
+        resultText.innerText = inputValue + " is not a palindrome";
+    }
+}
+
+button.addEventListener("click", function() {
+   noInput();
+   palindromeChecker();
+});
+</script>
+</body>
+</html>
