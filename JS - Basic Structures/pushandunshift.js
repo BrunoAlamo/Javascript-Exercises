@@ -1,3 +1,5 @@
+//Add items to an Array with push() and unshift()
+
 function mixedNumbers (arr){
     arr.unshift('I', '2', 'three');
     arr.push(7, 'VIII', 9);
