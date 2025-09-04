@@ -1,7 +1,7 @@
 const checkForStraights = (arr) => {
     // Remove duplicates and sort the array
     const sortedArr = [...new Set(arr)].sort((a, b) => a - b);
-    
+    //postcode
     // Check for small and large straight
     if (sortedArr.length >= 5) {
       // Check for large straight (5 consecutive numbers)
@@ -42,4 +42,5 @@ const checkForStraights = (arr) => {
   
     // If no straight found, reset the values
     updateRadioOption(5, 0);
+
   };
